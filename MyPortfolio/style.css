@@ -1,0 +1,444 @@
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+/* body */
+body {
+  font-family: "Helvetica Neue", sans-serif;
+
+  background-color: #ffffff;
+}
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+header h1,
+.video-resume-heading,
+.about-heading,
+.projects-heading,
+.contact-heading,
+#projects h2,
+.view-project-link,
+.social-heading {
+  font-family: "Bebas Neue", sans-serif;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.ul li,
+.email {
+  font-family: "Special Elite", cursive;
+}
+.email {
+  text-align: center;
+}
+/* ... (about) ... */
+#about {
+  background-image: linear-gradient(45deg, #2c3e50, #1e272e);
+  padding: 40px;
+  color: #fff;
+  animation: gradientAnimation 10s linear infinite alternate;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+.about-photo {
+  flex: 1;
+  text-align: center;
+}
+#about {
+  padding: 100px 40px;
+}
+.animated-photo {
+  width: 50%;
+  padding-bottom: 50%;
+  border-radius: 50%;
+  background-image: url("images/photo_2023-01-12_13-57-22.jpg");
+  background-size: cover;
+  background-position: center;
+  animation: pulsePhoto 4s infinite alternate;
+}
+.typing-text,
+.about-details p {
+  font-family: "Poppins", sans-serif;
+}
+
+@keyframes pulsePhoto {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+/* Nav section */
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+section {
+  padding: 40px;
+}
+
+/* Navbar */
+
+.project {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Video section */
+
+#video {
+  background-color: #1a1a1a;
+  padding: 40px;
+  color: #fff;
+  text-align: center;
+}
+
+.video-resume-heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.video-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  opacity: 0.9;
+  border-radius: 12px;
+  transition: opacity 0.3s;
+}
+
+.video-container:hover {
+  transform: scale(1.05);
+}
+
+.video-container:hover iframe {
+  opacity: 1;
+}
+
+/* Skills section */
+#skills {
+  background-color: #1a1a1a;
+  padding: 40px;
+  overflow: hidden;
+}
+
+#skills h2 {
+  color: #fff; /* White text color */
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: "Arapey", serif;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skill {
+  width: calc(33.33% - 40px);
+  margin: 0 20px 40px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+  transform-origin: center bottom;
+}
+
+.skill img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.skill:hover {
+  transform: translateY(-20px) scale(1.1) rotate(10deg);
+  filter: brightness(1.2) hue-rotate(45deg);
+}
+
+/* Animated background color */
+@keyframes backgroundAnimation {
+  0% {
+    background-color: #1a1a1a;
+  }
+  50% {
+    background-color: #292929; /* Darker gray color */
+  }
+  100% {
+    background-color: #1a1a1a;
+  }
+}
+
+/* Apply the animation to the #skills section */
+#skills {
+  animation: backgroundAnimation 5s infinite;
+}
+
+/* ... (Project styles) ... */
+
+#projects {
+  background-color: #f9f9f9;
+  padding: 40px;
+  color: #333;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.project {
+  flex-basis: calc(33.33% - 20px);
+  margin: 0 10px 20px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.project:hover {
+  transform: translateY(-10px);
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.project h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.project p {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.project a {
+  display: inline-block;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.project a:hover {
+  color: #0056b3;
+}
+
+/* Set the color of all links to match your design */
+a {
+  color: #ff6f61; /* Adjust to your preferred link color */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #fff; /* Change link color on hover */
+}
+
+/* Add styles for the "View Project" link */
+.view-project-link {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  position: relative; /* Required for pseudo-element */
+  overflow: hidden; /* Ensure overflow is hidden */
+  background-image: linear-gradient(
+    45deg,
+    #ff6f61,
+    #ffc300
+  ); /* Gradient background */
+  color: #fff; /* Text color */
+  transition: transform 0.3s;
+}
+
+.view-project-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.3
+  ); /* Opacity (0.3) and white color */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s;
+}
+
+.view-project-link:hover {
+  transform: scale(1.05); /* Slight scale on hover */
+}
+
+.view-project-link:hover::before {
+  opacity: 1; /* Show on hover */
+}
+
+/* ... (other styles) ... */
+
+.project a {
+  color: black;
+}
+.project a:hover {
+  color: black;
+}
+.project {
+  text-align: center;
+}
+
+/* ... (linkedin and github  section) ... */
+.social-links {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+.linkedin:hover,
+.github:hover {
+  transform: scale(1.1);
+  background-color: #ff6f61;
+}
+
+/* Original CSS code (above) */
+
+/* Media queries for responsiveness */
+
+/* Tablets and smaller devices */
+@media screen and (max-width: 1024px) {
+  /* Adjust header styles */
+  header {
+    padding: 10px;
+  }
+
+  /* Adjust font sizes */
+  h1,
+  h2,
+  h3 {
+    font-size: 20px;
+  }
+
+  /* Adjust padding and margins */
+  .project {
+    margin: 0 5px 10px;
+  }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 768px) {
+  /* Adjust header styles */
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Adjust font sizes */
+  h1 {
+    font-size: 24px;
+  }
+
+  /* Adjust padding and margins */
+  .project {
+    flex-basis: 100%;
+    margin: 0 0 10px;
+    padding: 10px;
+  }
+
+  /* Adjust skills container */
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Adjust about photo */
+  .about-photo {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  /* Adjust video container */
+  .video-container {
+    padding-top: 100%; /* Adjust aspect ratio for mobile */
+  }
+}
+
+/* Further media queries for smaller devices if needed */
+
+/* Rest of the CSS code (below) */
